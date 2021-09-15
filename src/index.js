@@ -1,8 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom'; 
+//Public -> fora do react; SRC -> Dentro do App
+import React from 'react'; // importação da biblioteca do js
+import ReactDOM from 'react-dom'; //
 import './index.css';
+import App from './App';
 
-ReactDOM.render(  <React.StrictMode>
+ReactDOM.render(
+    <React.StrictMode>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
