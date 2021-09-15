@@ -1,7 +1,13 @@
 import React from 'react';
+import NoteList from './components/NoteList'
+import FormRegistration from './components/FormRegistration.jsx'
+
 function App() {
-  return (
-    <h1>Test successful</h1>
+  return(
+    <main>
+      <FormRegistration/>
+      <NoteList/>
+      </main>
   );
 }
 export default App;
