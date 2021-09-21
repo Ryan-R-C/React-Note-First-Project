@@ -1,0 +1,9 @@
+form{
+    margin: 2rem
+}
+input,
+textarea,
+button{
+    display: block;
+    margin-top: 1rem;
+}

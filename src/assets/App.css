@@ -1,0 +1,8 @@
+:root{
+    --background-color: silver;
+    --shadow-color: black;
+    --main-color: blue;
+}
+main{
+    display: flex;
+}

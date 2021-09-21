@@ -1,7 +1,7 @@
 //Public -> fora do react; SRC -> Dentro do App
 import React from 'react'; // importação da biblioteca do js
 import ReactDOM from 'react-dom'; //
-import './index.css';
+import './assets/index.css';
 import App from './App';
 
 ReactDOM.render(

@@ -1,10 +1,10 @@
 import React, {Component} from'react';
-
+import "./card-note.css"
 
 export default class CardNote extends Component{ 
     render(){
         return (
-            <section>
+            <section className="card-note">
                 <header>
                     <h4>
                         Title

@@ -1,5 +1,6 @@
 import React, {Component} from'react';
-import CardNote from './CardNote';
+import CardNote from '../CardNote/CardNote';
+import './note-list-style.css'
 
 export default class NoteList extends Component{
     render(){
@@ -7,7 +8,7 @@ export default class NoteList extends Component{
             <ul>
                 {Array.of("Work","Study","Family").map((categoty, index) =>{
                     return (
-                        <li key={index}>
+                        <li className="NoteList" key={index}>
                             <h3>
                                 {categoty}
                             </h3>
