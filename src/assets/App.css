@@ -1,8 +1,30 @@
 :root{
-    --background-color: silver;
-    --shadow-color: black;
-    --main-color: blue;
+    --background-color: #f9f9f9;
+    --back-side: #efefef;
+    --shadow-color: rgba(12, 11, 11, 0.181);
+    --main-color: #1792d2;
+    --secondary-color: #6563ff;
+    --third-heavyblue: #143774;
+    --almost-black: #011113;
+    --custom-gray: #707070;
+    --custom-dark: #1F1F1F;
+    --jscolor: #f6dd04;
+    --htmlcolor: #f16524;
+    --csscolor: #0076be;
 }
-main{
+html{
+    background-color:var(--back-side);
+}
+.App_main{
+    width: 80%;
+    margin: auto;
+    margin-top: 3rem;
+
+    
     display: flex;
+    justify-content: space-evenly;
+
+    background-color: var(--background-color);
+    border-style: solid 1px black;
+    box-shadow: 0 0 5px 5px var(--shadow-color);
 }
