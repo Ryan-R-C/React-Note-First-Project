@@ -19,12 +19,26 @@ html{
     width: 80%;
     margin: auto;
     margin-top: 3rem;
-
-    
+    overflow: hidden;
+   
     display: flex;
     justify-content: space-evenly;
 
     background-color: var(--background-color);
     border-style: solid 1px black;
     box-shadow: 0 0 5px 5px var(--shadow-color);
+}
+button{ 
+    border: none;
+    border-radius: 12px;
+    color: var(--background-color);
+    background-color: var(--main-color);
+    padding: .4rem 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    box-shadow: 0 0 2px 2px var(--shadow-color);
+    width: 100%;
 }
