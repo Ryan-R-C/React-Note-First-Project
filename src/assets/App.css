@@ -16,9 +16,9 @@ html{
     background-color:var(--back-side);
 }
 .App_main{
-    width: 80%;
+    width: 95%;
     margin: auto;
-    margin-top: 3rem;
+    margin-top: 2%;
     overflow: hidden;
    
     display: flex;

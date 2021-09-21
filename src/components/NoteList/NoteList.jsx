@@ -1,5 +1,5 @@
 import React, {Component} from'react';
-import CardNote from '../CardNote/CardNote';
+import CardNote from '../CardNote';
 import './note-list-style.css'
 
 export default class NoteList extends Component{

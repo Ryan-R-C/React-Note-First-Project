@@ -1,6 +1,6 @@
 import React from 'react';
-import NoteList from './components/NoteList/NoteList'
-import FormRegistration from './components/FormRegistration/FormRegistration'
+import NoteList from './components/NoteList'
+import FormRegistration from './components/FormRegistration'
 import './assets/App.css'
 
 function App() {
