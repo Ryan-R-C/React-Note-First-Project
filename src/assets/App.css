@@ -41,4 +41,5 @@ button{
     font-size: 1rem;
     box-shadow: 0 0 2px 2px var(--shadow-color);
     width: 100%;
+    margin: .7rem 0
 }
