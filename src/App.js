@@ -25,10 +25,16 @@ class App extends Component {
   render() {
     return(
     <main className="App_main">
-      <section><FormRegistration
-       createNote={this.createNote.bind(this)} /></section>
-      <section><NoteList notes={this.state.notes}/></section>
-      </main>
+      <div className="App_main__div-holder">
+          <section className="App_main__div-holder__section">
+            <FormRegistration
+          createNote={this.createNote.bind(this)} />
+          </section>
+          <section className="App_main__div-holder__sect">
+            <NoteList notes={this.state.notes}/>
+          </section>
+      </div>
+    </main>
   );
 }}
 export default App;

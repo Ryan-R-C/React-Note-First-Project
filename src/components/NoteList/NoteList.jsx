@@ -5,7 +5,7 @@ import './note-list-style.css'
 export default class NoteList extends Component{
     render(){
         return (
-            <ul>
+            <ul className="task">
                 {this.props.notes.map((note, index) =>{
                     return (
                         <li className="NoteList" key={index}>

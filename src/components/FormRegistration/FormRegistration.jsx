@@ -24,22 +24,26 @@ export default class FormRegistration extends Component{
 
     render(){
         return(
-        <form
-        onSubmit={this._createNote.bind(this)}>
-            <input 
-            type="text"
-            placeholder="Title"
-            onChange={this._handleTitle.bind(this)}
-            />
-            <textarea 
-            placeholder="Write your note..."
-            rows={15}
-            onChange={this._handleText.bind(this)}
-            />
-            <button>
-            Create note
-            </button>
-        </form>
+        <section className="form-registration__section">
+            <form
+            onSubmit={this._createNote.bind(this)}>
+                <input
+                className="form-registration__section__form" 
+                type="text"
+                placeholder="Title"
+                onChange={this._handleTitle.bind(this)}
+                />
+                <textarea
+                className="form-registration__section__text-area" 
+                placeholder="Write your note..."
+                rows={15}
+                onChange={this._handleText.bind(this)}
+                />
+                <button>
+                Create note
+                </button>
+            </form>
+        </section>
         )
     }
 }

@@ -17,17 +17,23 @@ html{
 }
 .App_main{
     width: 95%;
-    margin: auto;
+    margin: 0 auto;
     margin-top: 2%;
     overflow: hidden;
    
-    display: flex;
-    justify-content: space-evenly;
-
     background-color: var(--background-color);
     border-style: solid 1px black;
     box-shadow: 0 0 5px 5px var(--shadow-color);
 }
+
+.App_main__div-holder{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem;
+}
+
+/*.App_main__div-holder__section{}*/
+
 button{ 
     border: none;
     border-radius: 12px;
