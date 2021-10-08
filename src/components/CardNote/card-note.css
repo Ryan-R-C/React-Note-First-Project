@@ -1,0 +1,14 @@
+.CardNote{
+    border: 1px solid var(--custom-gray);
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 0 2px 2px var(--shadow-color);
+}
+.CardNote__header__date{
+    color: var(--custom-gray);
+    font-size: .8rem;
+    margin: 0;
+}
+.CardNote__main__content{
+    text-align: justify;
+}

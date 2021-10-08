@@ -18,16 +18,16 @@ export default class CardNote extends Component{
     render(){
         return (
             <section className="CardNote">
-                <header className="CardNote_header">
-                    <h2>
+                <header className="CardNote__header">
+                    <h2 className="CardNote__header__title">
                         {this.props.title}
                     </h2>
-                    <h3>
+                    <h3 className="CardNote__header__date">
                         {this.props.date}
                     </h3>
                 </header>
                 <main>
-                    <p>
+                    <p className="CardNote__main__content">
                         {this.props.text}
                     </p>
                 </main>
