@@ -16,14 +16,14 @@ html{
     background-color:var(--back-side);
 }
 .App_main{
-    width: 95%;
+    background-color: var(--background-color);
+    border-radius: 1rem;
+    border: 1px solid black;
+    box-shadow: 0 0 5px 5px var(--shadow-color);
     margin: 0 auto;
     margin-top: 2%;
     overflow: hidden;
-   
-    background-color: var(--background-color);
-    border-style: solid 1px black;
-    box-shadow: 0 0 5px 5px var(--shadow-color);
+    width: 95%;
 }
 
 .App_main__div-holder{
