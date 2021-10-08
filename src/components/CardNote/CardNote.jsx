@@ -6,8 +6,10 @@ export default class CardNote extends Component{
     deleteThisTask(){
         const Delete = (event) =>{
         const delBtn = event.target
-            const semiParent = delBtn.parentElement.parentElement
-            const deleteParent = semiParent.parentElement
+            const deleteParent = delBtn.parentElement.parentElement.parentElement
+            /*It run the from the root to the main atribute
+            It goes: 
+            /footer to section.CardNote to li.noteList*/
             deleteParent.remove()
         }
         return Delete

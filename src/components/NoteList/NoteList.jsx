@@ -8,7 +8,7 @@ export default class NoteList extends Component{
             <ul className="task">
                 {this.props.notes.map((note, index) =>{
                     return (
-                        <li className="NoteList" key={index}>
+                        <li className="noteList" key={index}>
                             <CardNote title={note.title} date={note.date} text={note.text}/>
                         </li>
                     );
