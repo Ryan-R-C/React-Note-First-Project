@@ -12,7 +12,6 @@ export default class FormRegistration extends Component{
     _handleDate(event){
         event.stopPropagation()
         this.date = event.target.value
-        console.log(this.date)
     }
     _handleTitle(event){
         event.stopPropagation()
