@@ -15,6 +15,7 @@
 html{
     background-color:var(--back-side);
 }
+*{box-sizing: border-box;}
 .App_main{
     background-color: var(--background-color);
     border-radius: 1rem;
@@ -34,6 +35,12 @@ html{
 }
 
 /*.App_main__div-holder__section{}*/
+
+.App_main__div-holder__section--NoteList{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
 
 button{ 
     border: none;

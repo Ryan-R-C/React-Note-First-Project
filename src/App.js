@@ -30,7 +30,8 @@ class App extends Component {
             <FormRegistration
             createNote={this.createNote.bind(this)} />
           </section>
-          <section className="App_main__div-holder__sect">
+          <section className="App_main__div-holder__section
+                              App_main__div-holder__section--NoteList">
             <NoteList notes={this.state.notes}/>
           </section>
       </div>
