@@ -2,6 +2,7 @@ import React, {Component} from'react';
 import "./card-note.css"
 
 export default class CardNote extends Component{
+    
     deleteThisTask(){
         const Delete = (event) =>{
         const delBtn = event.target
@@ -19,6 +20,9 @@ export default class CardNote extends Component{
                     <h2>
                         {this.props.title}
                     </h2>
+                    <h3>
+                        {this.props.date}
+                    </h3>
                 </header>
                 <main>
                     <p>

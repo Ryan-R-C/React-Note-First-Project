@@ -9,7 +9,7 @@ export default class NoteList extends Component{
                 {this.props.notes.map((note, index) =>{
                     return (
                         <li className="NoteList" key={index}>
-                            <CardNote title={note.title} text={note.text}/>
+                            <CardNote title={note.title} date={note.date} text={note.text}/>
                         </li>
                     );
                 })}

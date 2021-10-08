@@ -13,8 +13,8 @@ class App extends Component {
     }
   }
 
-  createNote(title, text) {
-    const newNote = {title, text}
+  createNote(title, date ,text) {
+    const newNote = {title, date ,text}
     const newNotesArray = [...this.state.notes,newNote]
     const newStatea = {
       notes: newNotesArray
@@ -28,7 +28,7 @@ class App extends Component {
       <div className="App_main__div-holder">
           <section className="App_main__div-holder__section">
             <FormRegistration
-          createNote={this.createNote.bind(this)} />
+            createNote={this.createNote.bind(this)} />
           </section>
           <section className="App_main__div-holder__sect">
             <NoteList notes={this.state.notes}/>
