@@ -34,6 +34,7 @@ export default class FormRegistration extends Component{
         return(
         <section className="form-registration__section">
             <form
+            className="form-registration__section__form"
             onSubmit={this._createNote.bind(this)}>
 
                 <input
@@ -47,7 +48,7 @@ export default class FormRegistration extends Component{
 
 
                 <input
-                className="form-registration__section__form" 
+                className="form-registration__section__form__title" 
                 
                 type="text"
                 
@@ -58,7 +59,7 @@ export default class FormRegistration extends Component{
 
 
                 <textarea
-                className="form-registration__section__text-area" 
+                className="form-registration__section__form__text-area" 
 
                 placeholder="Write your note..."
                 

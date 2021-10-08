@@ -1,9 +1,18 @@
-.form-registration__section__text-area,
+.form-registration__section{
+    margin: 0 auto;
+}
 .form-registration__section__form{
-    display: block;
-    margin-top: 1rem;
-    padding: .5rem;
+    margin: 0 auto;
+    box-sizing: border-box;
     width: 100%;
+}
+.form-registration__section__form *{
+    box-sizing: border-box;
+    max-width: 25rem;
+    display: block;
+    margin: 1rem auto;
+    padding: .5rem;
+    width: calc(100% - 0.5rem);
 }
 .form-registration__section__text-area{
     resize: none;

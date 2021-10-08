@@ -28,6 +28,7 @@ html{
 
 .App_main__div-holder{
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     margin: 2rem;
 }

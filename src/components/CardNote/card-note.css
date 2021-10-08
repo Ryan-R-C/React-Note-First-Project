@@ -3,6 +3,8 @@
     border-radius: 1rem;
     padding: 1rem;
     box-shadow: 0 0 2px 2px var(--shadow-color);
+    max-width: 25rem;
+
 }
 .CardNote__header__date{
     color: var(--custom-gray);
