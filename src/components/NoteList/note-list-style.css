@@ -13,12 +13,16 @@
     margin-bottom: 1rem;
     width: 90%;
 }
-@media screen and (min-width:768px){
-    
+@media screen and (min-width:425px){
     .task{
         flex-direction: row;
     }
-    
+    .task__note-list{
+        width: 45%;
+    }
+}
+
+@media screen and (min-width:768px){
     .task__note-list{
         width: 30%;
         margin-bottom: 2rem
