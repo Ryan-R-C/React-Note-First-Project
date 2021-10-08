@@ -1,5 +1,8 @@
+import moment from 'moment';
 import React, {Component} from'react';
 import './form-registration-style.css'
+//import moment from 'moment'
+//moment(this.props.date.value).format('MMMM  YYYY, h:mm:ss')
 
 export default class FormRegistration extends Component{
     
@@ -11,7 +14,7 @@ export default class FormRegistration extends Component{
     }
     _handleDate(event){
         event.stopPropagation()
-        this.date = event.target.value
+        this.date = moment(event.target.value).format('MMMM Do YYYY, h:mm')
     }
     _handleTitle(event){
         event.stopPropagation()
