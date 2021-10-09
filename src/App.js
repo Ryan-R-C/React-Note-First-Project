@@ -21,7 +21,6 @@ class App extends Component {
     }
     this.setState(newStatea)
   }
-
   render() {
     return(
     <main className="App_main">

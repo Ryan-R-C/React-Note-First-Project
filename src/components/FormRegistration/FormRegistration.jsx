@@ -6,12 +6,17 @@ import './form-registration-style.css'
 
 export default class FormRegistration extends Component{
     
+
     constructor(props){
         super(props)
         this.title=""
         this.date= ""
         this.text= ""
+
     }
+
+    LocalStorageData = []
+    
     _handleDate(event){
         event.stopPropagation()
         this.date = moment(event.target.value).format('MMMM Do YYYY, h:mm')
@@ -24,10 +29,16 @@ export default class FormRegistration extends Component{
         event.stopPropagation()
         this.text = event.target.value
     }
+
     _createNote(event){
         event.preventDefault()
         event.stopPropagation()
-        this.props.createNote(this.title, this.date, this.text)
+        let data = [this.title, this.date, this.text]
+        this.props.createNote(...data)
+        //Transforms the data in an objeto to convert to string
+        Object.assign({}, ...data)
+        this.LocalStorageData.push(data)
+        localStorage.setItem('task', JSON.stringify(this.LocalStorageData))
     }
 
     render(){
