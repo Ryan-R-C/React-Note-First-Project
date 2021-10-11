@@ -21,10 +21,27 @@ class App extends Component {
     }
     this.setState(newStatea)
   }
+  
+  _createNoteOfLocalStorage(){
+    const CreatedTasks = JSON.parse(localStorage.getItem('task')) || []
+
+    this.createNote(CreatedTasks)
+
+    CreatedTasks.forEach(el=>{
+      console.log(...el)
+      this.createNote(...el)
+    })
+    
+}
+
   render() {
     return(
     <main className="App_main">
       <div className="App_main__div-holder">
+        <button
+        onClick={() => this._createNoteOfLocalStorage()}>
+
+        </button>
           <section className="App_main__div-holder__section">
             <FormRegistration
             createNote={this.createNote.bind(this)} />

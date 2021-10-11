@@ -12,17 +12,21 @@ export default class FormRegistration extends Component{
         this.title=""
         this.date= ""
         this.text= ""
+        //It tries to create a JSON of localStorage item, but if it cannot it just create an array
+        this.LocalStorageData = JSON.parse(localStorage.getItem('task')) || []
+        
         
     }
-    
-    //It tries to create a JSON of localStorage item, but if it cannot it just create an array
-    LocalStorageData = JSON.parse(localStorage.getItem('task')) || []
-    
+
+    setLocalStorage(){
+        localStorage.setItem('task', JSON.stringify(this.LocalStorageData))
+    }
+
     handleLocalStorage(data){
         //Transforms the data in an objeto to convert to string
         Object.assign({}, ...data)
         this.LocalStorageData.push(data)
-        localStorage.setItem('task', JSON.stringify(this.LocalStorageData))
+        this.setLocalStorage()
     }
 
     _handleDate(event){
@@ -40,7 +44,7 @@ export default class FormRegistration extends Component{
 
     _createNote(event){
         event.preventDefault()
-        event.stopPropagation()
+        event.stopPropagation() 
         let data = [this.title, this.date, this.text]
         this.props.createNote(...data)
         this.handleLocalStorage(data)
@@ -48,7 +52,9 @@ export default class FormRegistration extends Component{
 
     render(){
         return(
-        <section className="form-registration__section">
+        <section
+        className="form-registration__section"
+        >
             <form
             className="form-registration__section__form"
             onSubmit={this._createNote.bind(this)}>
