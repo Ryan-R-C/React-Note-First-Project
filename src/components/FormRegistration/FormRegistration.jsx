@@ -18,6 +18,13 @@ export default class FormRegistration extends Component{
     //It tries to create a JSON of localStorage item, but if it cannot it just create an array
     LocalStorageData = JSON.parse(localStorage.getItem('task')) || []
     
+    handleLocalStorage(data){
+        //Transforms the data in an objeto to convert to string
+        Object.assign({}, ...data)
+        this.LocalStorageData.push(data)
+        localStorage.setItem('task', JSON.stringify(this.LocalStorageData))
+    }
+
     _handleDate(event){
         event.stopPropagation()
         this.date = moment(event.target.value).format('MMMM Do YYYY, h:mm')
@@ -36,10 +43,7 @@ export default class FormRegistration extends Component{
         event.stopPropagation()
         let data = [this.title, this.date, this.text]
         this.props.createNote(...data)
-        //Transforms the data in an objeto to convert to string
-        Object.assign({}, ...data)
-        this.LocalStorageData.push(data)
-        localStorage.setItem('task', JSON.stringify(this.LocalStorageData))
+        this.handleLocalStorage(data)
     }
 
     render(){
