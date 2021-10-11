@@ -15,7 +15,7 @@ export default class FormRegistration extends Component{
 
     }
 
-    LocalStorageData = []
+    LocalStorageData = JSON.parse(localStorage.getItem('task')) || []
     
     _handleDate(event){
         event.stopPropagation()
@@ -39,6 +39,9 @@ export default class FormRegistration extends Component{
         Object.assign({}, ...data)
         this.LocalStorageData.push(data)
         localStorage.setItem('task', JSON.stringify(this.LocalStorageData))
+        const tasks = JSON.parse(localStorage.getItem('task')) || []
+        //It tries to create a JSON of localStorage item, but if it cannot it just create an array
+        console.log(tasks)
     }
 
     render(){
