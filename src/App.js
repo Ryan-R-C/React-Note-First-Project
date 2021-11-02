@@ -22,11 +22,12 @@ class App extends Component {
     this.setState(newStatea)
   }
   
-  createNoteOfLocalStorage(){
+  createNoteOfLocalStorage(event){
+    event.preventDefault()
     const CreatedTasks = JSON.parse(localStorage.getItem('task')) || []
 
-    CreatedTasks.forEach((el)=>{
-      console.log(...el)
+    CreatedTasks.forEach((el, index)=>{
+      console.log(...el, index)
       this.createNote(...el)
     })
   }

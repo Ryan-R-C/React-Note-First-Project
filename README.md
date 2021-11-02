@@ -1,5 +1,7 @@
 # `React Note Manager`
 
+![A image of this program](https://i.ibb.co/jg6Sdby/react-proj-note2.jpg)
+
 ## A Note/Task Manager using `React`
 
 ### In this project:
