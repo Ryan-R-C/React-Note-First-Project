@@ -1,5 +1,6 @@
 import React, {Component} from'react';
 import "./card-note.css"
+import deleteSvg from '../../assets/icons/delete.svg'
 
 export default class CardNote extends Component{
     
@@ -29,11 +30,9 @@ export default class CardNote extends Component{
                 <main>
                     <p className="CardNote__main__content">
                         {this.props.text}
-                    </p>
+                    </p> 
+                    <img src={deleteSvg} alt="delete" onClick={this.deleteThisTask()}/>
                 </main>
-                <footer>
-                    <button className="delBtn" onClick={this.deleteThisTask()}>Delete</button>
-                </footer>
             </section>
         )
     }
