@@ -1,6 +1,6 @@
 import React, {Component} from'react';
 import "./card-note.css"
-import deleteSvg from '../../assets/icons/delete.svg'
+import {ReactComponent as DeleteSvg} from '../../assets/icons/delete.svg'
 
 export default class CardNote extends Component{
     
@@ -31,7 +31,7 @@ export default class CardNote extends Component{
                     <p className="CardNote__main__content">
                         {this.props.text}
                     </p> 
-                    <img src={deleteSvg} alt="delete" onClick={this.deleteThisTask()}/>
+                    <DeleteSvg alt="delete" onClick={this.deleteThisTask()}/>
                 </main>
             </section>
         )
