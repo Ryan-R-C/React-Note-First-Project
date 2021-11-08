@@ -29,9 +29,15 @@ class App extends Component {
     CreatedTasks.forEach((el, index)=>{
       console.log(...el, index)
       this.createNote(...el)
-    })
+    })  
   }
 
+  deleteThisTask(index){
+      let arrayOfNotes = this.state.notes
+      arrayOfNotes.splice(index,1)
+      this.setState({notes: arrayOfNotes})
+
+}
 
   render() {
     return(
@@ -45,11 +51,14 @@ class App extends Component {
         </button>
           <section className="App_main__div-holder__section">
             <FormRegistration
-            createNote={this.createNote.bind(this)} />
+            createNote={this.createNote.bind(this)}
+            />
           </section>
           <section className="App_main__div-holder__section
                               App_main__div-holder__section--NoteList">
-            <NoteList notes={this.state.notes}/>
+            <NoteList
+            notes={this.state.notes}
+            deleteNote={this.deleteThisTask.bind(this)}/>
           </section>
       </div>
     </main>

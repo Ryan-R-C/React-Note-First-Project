@@ -2,20 +2,15 @@ import React, {Component} from'react';
 import "./card-note.css"
 import {ReactComponent as DeleteSvg} from '../../assets/icons/delete.svg'
 
+
 export default class CardNote extends Component{
     
-    deleteThisTask(){
-        const Delete = (event) =>{
-        const delBtn = event.target
-            const deleteParent = delBtn.parentElement.parentElement.parentElement
-            /*It run the from the root to the main atribute
-            It goes: 
-            /footer to section.CardNote to li.noteList*/
-            deleteParent.remove()
-        }
-        return Delete
+    delete(){
+        const index = this.props.index
+        console.log(index);
+        this.props.deleteNote(index)
     }
-    
+
     render(){
         return (
             <section className="CardNote">
@@ -31,7 +26,7 @@ export default class CardNote extends Component{
                     <p className="CardNote__main__content">
                         {this.props.text}
                     </p> 
-                    <DeleteSvg alt="delete" onClick={this.deleteThisTask()}/>
+                    <DeleteSvg alt="delete" onClick={this.delete.bind(this)}/>
                 </main>
             </section>
         )
