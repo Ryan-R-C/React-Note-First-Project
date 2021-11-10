@@ -1,15 +1,23 @@
 import React, { Component } from 'react';
+
+/*============
+ /COMPONENTS/  
+============*/
 import NoteList from './components/NoteList'
 import FormRegistration from './components/FormRegistration'
+
+/*========
+ /Assets/  
+========*/
 import './assets/App.css'
 import './assets/index.css'
 
-class App extends Component {
+export default class App extends Component {
   constructor(){
-    super()
+    super()//access the element father object
 
     this.state = {
-      notes:[]
+      notes:[]//storage all notes in a array
     }
   }
 
@@ -21,7 +29,7 @@ class App extends Component {
     }
     this.setState(newStatea)
   }
-  
+  //To refract:
   createNoteOfLocalStorage(event){
     event.preventDefault()
     const CreatedTasks = JSON.parse(localStorage.getItem('task')) || []
@@ -31,7 +39,10 @@ class App extends Component {
       this.createNote(...el)
     })  
   }
-
+  /*It starts in the NoteList 
+  / after goes to CardNote who bind the element
+  / and calls a prefunction
+  / then this functions is called*/
   deleteThisTask(index){
       let arrayOfNotes = this.state.notes
       arrayOfNotes.splice(index,1)
@@ -64,4 +75,3 @@ class App extends Component {
     </main>
   );
 }}
-export default App;

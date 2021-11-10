@@ -8,7 +8,7 @@ export default class CardNote extends Component{
     delete(){
         const index = this.props.index
         console.log(index);
-        this.props.deleteNote(index)
+        this.props.deleteNote(index)//It calls NoteList deleteNote
     }
 
     render(){
