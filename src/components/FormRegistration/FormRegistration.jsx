@@ -1,12 +1,9 @@
 import moment from 'moment';
 import React, {Component} from'react';
-import './form-registration-style.css'
-//import moment from 'moment'
-//moment(this.props.date.value).format('MMMM  YYYY, h:mm:ss')
+import './form-registration-style.css';
 
 export default class FormRegistration extends Component{
     
-
     constructor(props){
         super(props)
         this.title=""
@@ -17,7 +14,7 @@ export default class FormRegistration extends Component{
         
         
     }
-
+    
     setLocalStorage(){
         localStorage.setItem('task', JSON.stringify(this.LocalStorageData))
     }
