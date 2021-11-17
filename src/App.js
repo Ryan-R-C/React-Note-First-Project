@@ -75,6 +75,7 @@ export default class App extends Component {
           </section>
           <section className="App_main__div-holder__section
                               App_main__div-holder__section--NoteList">
+            <CategoryList/>
             <NoteList
             notes={this.state.notes}
             deleteNote={this.deleteThisTask.bind(this)}/>
