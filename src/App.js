@@ -3,14 +3,20 @@ import React, { Component } from 'react';
 /*============
  /COMPONENTS/  
 ============*/
-import NoteList from './components/NoteList'
-import FormRegistration from './components/FormRegistration'
+import NoteList from './components/NoteList';
+import FormRegistration from './components/FormRegistration';
+import CategoryList from './components/CategoryList'
 
 /*========
  /Assets/  
 ========*/
 import './assets/App.css'
 import './assets/index.css'
+
+/*-----------------
+In this app it works:
+Form Registration give the user params to Note
+-----------------*/
 
 export default class App extends Component {
   constructor(){
@@ -39,10 +45,11 @@ export default class App extends Component {
       this.createNote(...el)
     })  
   }
-  /*It starts in the NoteList 
-  / after goes to CardNote who bind the element
-  / and calls a prefunction
-  / then this functions is called*/
+  /*How delete works
+  / It starts in the NoteList 
+  /  after goes to CardNote who bind the element
+  /  and calls a prefunction
+  /  then this functions is called*/
   deleteThisTask(index){
       let arrayOfNotes = this.state.notes
       arrayOfNotes.splice(index,1)
@@ -60,6 +67,7 @@ export default class App extends Component {
         }>
           Restore your last task
         </button>
+        <div>
           <section className="App_main__div-holder__section">
             <FormRegistration
             createNote={this.createNote.bind(this)}
@@ -71,6 +79,7 @@ export default class App extends Component {
             notes={this.state.notes}
             deleteNote={this.deleteThisTask.bind(this)}/>
           </section>
+        </div>
       </div>
     </main>
   );
