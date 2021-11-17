@@ -4,3 +4,37 @@
 .category-list__list-father__list-element
 .category-list__input
 */
+.category-list{
+    width: 100%
+}
+.category-list,
+.category-list__list-father,
+.category-list__list-father__list-element
+{
+    display: flex
+}
+.category-list__list-father{
+    width: 75%;
+    justify-content: space-evenly;
+    padding: 0
+}
+.category-list,
+.category-list__list-father__list-element{
+    align-items: center;
+}
+.category-list__list-father__list-element{
+    border: none;
+    border-radius: 12px;
+    color: var(--background-color);
+    background-color: var(--main-color);
+    text-align: center;
+    padding: .3em;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.category-list__input{
+    height: 2rem;
+    width: 25%
+}
