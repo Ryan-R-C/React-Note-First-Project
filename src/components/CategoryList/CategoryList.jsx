@@ -9,8 +9,9 @@ render(){
             className="category-list__list-father">
                 {
                     this.props.categories.map(
-                        (category) => (
+                        (category, index) => (
                         <li
+                        key={index}
                         className="category-list__list-father__list-element">
                             {category}
                         </li>
