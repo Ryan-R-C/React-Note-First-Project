@@ -2,6 +2,10 @@ import React, {Component} from'react';
 import './category-list.css';
 
 export default class CategoryList extends Component{
+    _handleInputEvent(e){
+        console.log(e.key)
+    }
+
 render(){
     return(
         <article className="category-list">
@@ -20,7 +24,10 @@ render(){
                 }
             </ul>
             <input type="text"
-            className="category-list__input"/>
+            className="category-list__input"
+            placeholder='Add a category :)'
+            onKeyUp={this._handleInputEvent.bind(this)}
+            />
         </article>
     )
 }
