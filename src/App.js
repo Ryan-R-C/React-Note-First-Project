@@ -55,8 +55,17 @@ export default class App extends Component {
       let arrayOfNotes = this.state.notes
       arrayOfNotes.splice(index,1)
       this.setState({notes: arrayOfNotes})
+  }
+  addCategory(category){
 
-}
+    const newNotesArray = [...this.state.categories, category]
+    const newState = {
+      ...this.state,
+      categories: newNotesArray
+    }
+    this.setState(newState)
+    
+  }
 
   render() {
     return(
@@ -77,8 +86,9 @@ export default class App extends Component {
           <section className="App_main__div-holder__section
                               App_main__div-holder__section--NoteList">
             <CategoryList
-            
-            categories={this.state.categories}/>
+            addCategory={this.addCategory.bind(this)}
+            categories={this.state.categories}
+            />
             <NoteList
             notes={this.state.notes}
             deleteNote={this.deleteThisTask.bind(this)}/>
