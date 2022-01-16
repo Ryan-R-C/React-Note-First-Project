@@ -4,6 +4,9 @@ import './category-list.css';
 export default class CategoryList extends Component{
     _handleInputEvent(e){
         console.log(e.key)
+        if(e.key === 'Enter'){
+        console.log("ENTER HAS ENTERED")
+        }
     }
 
 render(){
