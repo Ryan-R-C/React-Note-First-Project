@@ -55,6 +55,19 @@ export default class FormRegistration extends Component{
             <form
             className="form-registration__section__form"
             onSubmit={this._createNote.bind(this)}>
+                <select>
+                {
+                    this.props.categories.map(
+                        (category, index) => (
+                        <option
+                        key={index}>
+                            {category}
+                        </option>
+                        )
+                    )
+                }
+
+                </select>
 
                 <input
                 type="datetime-local" 
