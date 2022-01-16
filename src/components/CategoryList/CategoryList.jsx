@@ -7,6 +7,7 @@ export default class CategoryList extends Component{
         if(e.key === 'Enter'){
             // console.log(e.target.value)
             this.props.addCategory(e.target.value)
+            e.target.value = ''
         }
     }
 
