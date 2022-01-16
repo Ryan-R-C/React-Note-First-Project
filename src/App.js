@@ -23,7 +23,8 @@ export default class App extends Component {
     super()//access the element father object
 
     this.state = {
-      notes:[]//storage all notes in a array
+      notes:[],//storage all notes in a array
+      categories:["Games", "Work"]
     }
   }
 
@@ -75,7 +76,9 @@ export default class App extends Component {
           </section>
           <section className="App_main__div-holder__section
                               App_main__div-holder__section--NoteList">
-            <CategoryList/>
+            <CategoryList
+            
+            categories={this.state.categories}/>
             <NoteList
             notes={this.state.notes}
             deleteNote={this.deleteThisTask.bind(this)}/>
