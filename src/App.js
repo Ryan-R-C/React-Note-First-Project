@@ -24,7 +24,7 @@ export default class App extends Component {
 
     this.state = {
       notes:[],//storage all notes in a array
-      categories:["Games", "Work"]
+      categories:[]
     }
   }
 
