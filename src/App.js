@@ -71,12 +71,12 @@ export default class App extends Component {
     return(
     <main className="App_main">
       <div className="App_main__div-holder">
-        <button
+        {/* <button
         onClick={
           this.createNoteOfLocalStorage.bind(this)
         }>
           Restore your last task
-        </button>
+        </button> */}
         <div>
           <section className="App_main__div-holder__section">
             <FormRegistration
