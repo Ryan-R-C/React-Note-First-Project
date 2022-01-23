@@ -26,6 +26,11 @@ export default class FormRegistration extends Component{
         this.LocalStorageData.push(data)
         this.setLocalStorage()
     }
+    _handleCategory(event){
+        event.stopPropagation()
+        this.category = event.target.value
+        console.log( event.target.value)
+    }
 
     _handleDate(event){
         event.stopPropagation()
@@ -56,7 +61,9 @@ export default class FormRegistration extends Component{
             <form
             className="form-registration__section__form"
             onSubmit={this._createNote.bind(this)}>
-                <select>
+                <select
+                onChange={this._handleCategory.bind(this)}
+                >
                     <option value="No category">No category</option>
                 {
                     this.props.categories.map(
