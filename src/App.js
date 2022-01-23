@@ -24,7 +24,7 @@ export default class App extends Component {
 
     this.state = {
       notes:[],//storage all notes in a array
-      categories:[]
+      // categories:[]
     }
   }
 
@@ -56,6 +56,8 @@ export default class App extends Component {
       arrayOfNotes.splice(index,1)
       this.setState({notes: arrayOfNotes})
   }
+  /*
+  // What is the problem with this code? it needs to re render the page as many times a new category is created... so to solve that it is necessary to create a new class
   addCategory(category){
 
     const newNotesArray = [...this.state.categories, category]
@@ -66,6 +68,7 @@ export default class App extends Component {
     this.setState(newState)
     
   }
+  */
 
   render() {
     return(
