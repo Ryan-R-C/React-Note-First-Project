@@ -10,7 +10,7 @@ export default class CategoryList extends Component{
             e.target.value = ''
         }
     }
-
+ 
 render(){
     return(
         <article className="category-list">

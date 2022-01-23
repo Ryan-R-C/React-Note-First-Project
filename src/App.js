@@ -80,6 +80,7 @@ export default class App extends Component {
         <div>
           <section className="App_main__div-holder__section">
             <FormRegistration
+            categories={this.state.categories}
             createNote={this.createNote.bind(this)}
             />
           </section>
