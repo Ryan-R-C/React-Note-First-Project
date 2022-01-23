@@ -9,6 +9,7 @@ export default class FormRegistration extends Component{
         this.title=""
         this.date= ""
         this.text= ""
+        this.category= "No category"
         //It tries to create a JSON of localStorage item, but if it cannot it just create an array
         this.LocalStorageData = JSON.parse(localStorage.getItem('task')) || []
         
@@ -42,7 +43,7 @@ export default class FormRegistration extends Component{
     _createNote(event){
         event.preventDefault()
         event.stopPropagation() 
-        let data = [this.title, this.date, this.text]
+        let data = [this.title, this.date, this.text, this.category]
         this.props.createNote(...data)
         this.handleLocalStorage(data)
     }
@@ -56,6 +57,7 @@ export default class FormRegistration extends Component{
             className="form-registration__section__form"
             onSubmit={this._createNote.bind(this)}>
                 <select>
+                    <option value="No category">No category</option>
                 {
                     this.props.categories.map(
                         (category, index) => (

@@ -28,6 +28,9 @@ export default class CardNote extends Component{
                     </p> 
                     <DeleteSvg alt="delete" onClick={this.delete.bind(this)}/>
                 </main>
+                <aside>
+                    <button>{this.props.category}</button>
+                </aside>
             </section>
         )
     }

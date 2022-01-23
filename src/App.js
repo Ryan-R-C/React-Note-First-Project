@@ -28,8 +28,8 @@ export default class App extends Component {
     }
   }
 
-  createNote(title, date ,text) {
-    const newNote = {title, date ,text}
+  createNote(title, date ,text, category) {
+    const newNote = {title, date ,text, category}
     const newNotesArray = [...this.state.notes,newNote]
     const newStatea = {
       notes: newNotesArray

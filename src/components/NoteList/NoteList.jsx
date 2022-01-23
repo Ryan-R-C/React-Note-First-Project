@@ -19,6 +19,7 @@ export default class NoteList extends Component{
                             title={note.title}
                             date={note.date}
                             text={note.text}
+                            category={note.category}
                             //it will call CardNote's delete
                             deleteNote={this.props.deleteNote}/>
                         </li>
