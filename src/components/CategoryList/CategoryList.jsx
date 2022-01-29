@@ -2,6 +2,24 @@ import React, {Component} from'react';
 import './category-list.css';
 
 export default class CategoryList extends Component{
+    
+    constructor(){
+        super();
+        this.state = {categories:[]}
+        this._newCategories = this._newCategories.bind(this);
+      }
+
+    componentDidMount(){
+        this.props.categories.subscribe(this._newCategories.bind(this));
+    }
+
+    _newCategories(categories){
+        console.log(categories)
+        this.setState({...this.state, categories})
+    }
+
+
+
     _handleInputEvent(e){
         console.log(e.key)
         if(e.key === 'Enter'){
@@ -17,7 +35,7 @@ render(){
             <ul  
             className="category-list__list-father">
                 {
-                    this.props.categories.map(
+                    this.state.categories.map(
                         (category, index) => (
                         <li
                         key={index}
