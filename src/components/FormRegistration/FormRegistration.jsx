@@ -12,8 +12,7 @@ export default class FormRegistration extends Component{
         this.category= "No category"
         //It tries to create a JSON of localStorage item, but if it cannot it just create an array
         this.LocalStorageData = JSON.parse(localStorage.getItem('task')) || []
-        
-        
+        this.state = {categories:[]}
     }
     
     setLocalStorage(){
@@ -66,7 +65,7 @@ export default class FormRegistration extends Component{
                 >
                     <option value="No category">No category</option>
                 {
-                    this.props.categories.map(
+                    this.state.categories.map(
                         (category, index) => (
                         <option
                         key={index}>
