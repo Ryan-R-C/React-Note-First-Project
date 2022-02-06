@@ -2,25 +2,35 @@ import React, {Component} from'react';
 import './category-list.css';
 
 export default class CategoryList extends Component{
-    
+
     constructor(){
         super();
-        this.state = {categories:[]}
+        this.state = {
+            categories:[]
+        }
         this._newCategories = this._newCategories.bind(this);
       }
 
     componentDidMount(){
-        this.props.categories.subscribe(this._newCategories.bind(this));
+        this.props.categories.subscribe(
+            this._newCategories
+        );
     }
+
+
+  componentWillUnmount(){
+        this.props.categories.unSubscribe(
+            this._newCategories
+        );
+  }
 
     _newCategories(categories){
         console.log(categories)
         this.setState({...this.state, categories})
     }
 
-
-
     _handleInputEvent(e){
+        console.log(this.props.categories)
         console.log(e.key)
         if(e.key === 'Enter'){
             // console.log(e.target.value)
