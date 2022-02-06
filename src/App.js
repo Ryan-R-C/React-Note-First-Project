@@ -85,7 +85,6 @@ export default class App extends Component {
   onChage of categories it needs to be changed the form too
   Observable!!!
   */
-
   render() {
     return(
     <main className="App_main">
@@ -110,8 +109,9 @@ export default class App extends Component {
             categories={this.categories}
             />
             <NoteList
+            deleteNote={this.notes.deleteThisTask.bind(this.notes)}
             notes={this.notes}
-            deleteNote={this.notes.deleteThisTask.bind(this.notes)}/>
+            />
           </section>
         </div>
       </div>
