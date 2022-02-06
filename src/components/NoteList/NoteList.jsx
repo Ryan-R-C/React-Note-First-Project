@@ -7,26 +7,28 @@ import './note-list-style.css'
 export default class NoteList extends Component{
 
 
-        constructor(){
-        super();
-        this.state = {notes:[]}
-        this._newNotes = this._newNotes.bind(this);
-        }
-        componentDidMount(){
+    constructor(){
+    super();
+    this.state = {notes:[]}
+    this._newNotes = this._newNotes.bind(this);
+    }
+
+    componentDidMount(){
         this.props.notes.subscribe(this._newNotes);
-        }
-        // componentWillUnmount(){
-        // this.props.notes.unSubscribe(this._novasnotes);
-        // }
-        _newNotes(newNote){
+    }
+    // componentWillUnmount(){
+    //     this.props.notes.unsubscribe(this._newNotes);
+    // }
+    _newNotes(newNote){
         this.setState({...this.state, newNote})
-        }
+    }
 
     render(){
         return (
             <ul className="task">
                 {//the note parameters is passed throught FormRegistration, contains all note data
-                this.state.notes.map((note, index) =>{
+                this.props.notes.notes.map((note, index) =>{
+                    console.log(note)
                     console.log(index)
                     return (    
                         <li className="task__note-list" 
