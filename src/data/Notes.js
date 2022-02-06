@@ -6,11 +6,28 @@ export default class NotesArray{
     createNote(title, text,category){
         const newNote = new Notes(title, text, category)
         this.notes.push(newNote)
+        console.log(this.notes)
+        this.notify()
+    }
+    addNote(title, text,category){
+        const newNote = new Notes(title, text, category)
+        this.notes.push(newNote)
+        console.log(this.notes)
+        this.notify()
     }
     deleteThisTask(index){
-        let arrayOfNotes = this.state.notes
+        console.log("index here")
+        console.log(index)
+        console.log(this.notes)
+        let arrayOfNotes = this.notes
+        console.log(arrayOfNotes)
         arrayOfNotes.splice(index,1)
-        this.setState({notes: arrayOfNotes})
+        console.log(arrayOfNotes)
+        this.notes =  arrayOfNotes
+        console.log(this.notes)
+        this.notify()
+
+
     }
     //this prop will notify the other components that is subribed
     subscribe(func){
@@ -20,7 +37,11 @@ export default class NotesArray{
 
     notify(){
         this._subcribers.forEach(
-            func => func(this.categories)
+            func => {
+                console.log(this.notes)
+                console.log(func)
+                func(this.notes)
+            }
         )
     }
 }
@@ -30,8 +51,5 @@ class Notes{
         this.title = title
         this.text = text
         this.category = category
-    }
-    addNote(newNote){
-        this.notes.push(newNote)
     }
 }

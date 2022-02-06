@@ -11,9 +11,20 @@ export default class Categories{
     }
 
     notify(){
+        console.log(this._subcribers)
         this._subcribers.forEach(
-            func => func(this.categories)
+            func => {
+                console.log(func)
+                return func(this.categories)
+            }
         )
+    }
+
+
+    unSubscribe(func){
+        console.log(this._subcribers.length)
+        this._subcribers = this._subcribers.filter(f => f !== func);
+        console.log(this._subcribers.length)
     }
 
 
